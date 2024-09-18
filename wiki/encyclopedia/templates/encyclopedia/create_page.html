@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Page</title>
+</head>
+<body>
+    <h1>Create New Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <button type="submit">Save Page</button>
+    </form>
+</body>
+</html>
